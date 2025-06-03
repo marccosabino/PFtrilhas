@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto de Monitoria de Tecnologia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        /* Estilo para o menu hamburguer */
+        .menu-icon span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+        .menu-open .menu-icon span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        .menu-open .menu-icon span:nth-child(2) {
+            opacity: 0;
+        }
+        .menu-open .menu-icon span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 smooth-scroll">
+
+    <header class="bg-sky-700 text-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#inicio" class="text-2xl font-bold hover:text-sky-200 transition duration-300">Monitoria Tech</a>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#inicio" class="hover:text-sky-200 transition duration-300">Início</a>
+                <a href="#sobre" class="hover:text-sky-200 transition duration-300">Sobre</a>
+                <a href="#monitores" class="hover:text-sky-200 transition duration-300">Monitores</a>
+                <a href="#horarios" class="hover:text-sky-200 transition duration-300">Horários</a>
+                <a href="#recursos" class="hover:text-sky-200 transition duration-300">Recursos</a>
+                <a href="#contato" class="hover:text-sky-200 transition duration-300">Contato</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-button" class="menu-icon focus:outline-none">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-sky-700">
+            <a href="#inicio" class="block py-2 px-6 text-sm hover:bg-sky-600 transition duration-300">Início</a>
+            <a href="#sobre" class="block py-2 px-6 text-sm hover:bg-sky-600 transition duration-300">Sobre</a>
+            <a href="#monitores" class="block py-2 px-6 text-sm hover:bg-sky-600 transition duration-300">Monitores</a>
+            <a href="#horarios" class="block py-2 px-6 text-sm hover:bg-sky-600 transition duration-300">Horários</a>
+            <a href="#recursos" class="block py-2 px-6 text-sm hover:bg-sky-600 transition duration-300">Recursos</a>
+            <a href="#contato" class="block py-2 px-6 text-sm hover:bg-sky-600 transition duration-300">Contato</a>
+        </div>
+    </header>
+
+    <section id="inicio" class="pt-24 pb-16 bg-gradient-to-r from-sky-600 to-cyan-500 text-white min-h-screen flex items-center">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">Bem-vindo ao Projeto de Monitoria de Tecnologia!</h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">Seu portal de apoio para dominar as tecnologias e alcançar o sucesso acadêmico.</p>
+            <a href="#sobre" class="bg-white text-sky-700 font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-sky-100 transition duration-300 text-lg">Saiba Mais</a>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-sky-700">Sobre o Projeto</h2>
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <img src="https://placehold.co/600x400/38BDF8/FFFFFF?text=Equipe+Colaborando" alt="Imagem ilustrativa do projeto de monitoria" class="rounded-lg shadow-xl w-full h-auto object-cover">
+                </div>
+                <div class="space-y-6 text-lg text-gray-700">
+                    <p><strong class="text-sky-600">Nossa Missão:</strong> Facilitar o aprendizado e o desenvolvimento de habilidades em tecnologia para todos os alunos, oferecendo suporte personalizado e recursos de qualidade.</p>
+                    <p><strong class="text-sky-600">Nossos Objetivos:</strong></p>
+                    <ul class="list-disc list-inside ml-4 space-y-2">
+                        <li>Reduzir as dificuldades dos alunos em disciplinas de tecnologia.</li>
+                        <li>Promover um ambiente de aprendizado colaborativo.</li>
+                        <li>Capacitar os alunos com conhecimentos práticos para o mercado.</li>
+                        <li>Incentivar a paixão pela tecnologia e inovação.</li>
+                    </ul>
+                    <p><strong class="text-sky-600">Como Funciona:</strong> Oferecemos sessões de monitoria individuais e em grupo, plantões de dúvidas, workshops e materiais de estudo complementares. Os agendamentos podem ser feitos online através da seção de horários.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="monitores" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-sky-700">Nossos Monitores</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <img src="https://placehold.co/150x150/9CA3AF/FFFFFF?text=Monitor+1" alt="Foto do Monitor 1" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-sky-500">
+                    <h3 class="text-2xl font-semibold text-center mb-2 text-sky-700">Ana Silva</h3>
+                    <p class="text-center text-sky-600 font-medium mb-3">Desenvolvimento Web (HTML, CSS, JavaScript)</p>
+                    <p class="text-gray-600 text-sm text-center leading-relaxed">"Apaixonada por criar interfaces intuitivas e ajudar os colegas a desvendarem os segredos do front-end."</p>
+                    <div class="text-center mt-4">
+                        <a href="mailto:ana.silva@example.com" class="text-sky-500 hover:text-sky-700"><i class="fas fa-envelope mr-1"></i> Contatar</a>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <img src="https://placehold.co/150x150/9CA3AF/FFFFFF?text=Monitor+2" alt="Foto do Monitor 2" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-sky-500">
+                    <h3 class="text-2xl font-semibold text-center mb-2 text-sky-700">Bruno Costa</h3>
+                    <p class="text-center text-sky-600 font-medium mb-3">Python e Análise de Dados</p>
+                    <p class="text-gray-600 text-sm text-center leading-relaxed">"Adoro explorar dados e compartilhar o poder do Python para resolver problemas complexos."</p>
+                     <div class="text-center mt-4">
+                        <a href="mailto:bruno.costa@example.com" class="text-sky-500 hover:text-sky-700"><i class="fas fa-envelope mr-1"></i> Contatar</a>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <img src="https://placehold.co/150x150/9CA3AF/FFFFFF?text=Monitor+3" alt="Foto do Monitor 3" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-sky-500">
+                    <h3 class="text-2xl font-semibold text-center mb-2 text-sky-700">Carla Dias</h3>
+                    <p class="text-center text-sky-600 font-medium mb-3">Java e Programação Orientada a Objetos</p>
+                    <p class="text-gray-600 text-sm text-center leading-relaxed">"Entusiasta de POO, pronta para ajudar a construir aplicações robustas e escaláveis com Java."</p>
+                     <div class="text-center mt-4">
+                        <a href="mailto:carla.dias@example.com" class="text-sky-500 hover:text-sky-700"><i class="fas fa-envelope mr-1"></i> Contatar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="horarios" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-sky-700">Horários e Agendamento</h2>
+            <p class="text-center text-lg text-gray-700 mb-10 max-w-2xl mx-auto">Confira nossa grade de horários e agende sua monitoria. Para agendar, entre em contato com o monitor desejado ou utilize o link de agendamento (se disponível).</p>
+            <div class="overflow-x-auto shadow-lg rounded-lg">
+                <table class="min-w-full bg-white">
+                    <thead class="bg-sky-600 text-white">
+                        <tr>
+                            <th class="py-4 px-6 text-left font-semibold">Dia</th>
+                            <th class="py-4 px-6 text-left font-semibold">Horário</th>
+                            <th class="py-4 px-6 text-left font-semibold">Monitor(a)</th>
+                            <th class="py-4 px-6 text-left font-semibold">Tecnologia/Disciplina</th>
+                            <th class="py-4 px-6 text-left font-semibold">Local/Link</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-700">
+                        <tr class="border-b hover:bg-sky-50 transition duration-200">
+                            <td class="py-4 px-6">Segunda-feira</td>
+                            <td class="py-4 px-6">14:00 - 16:00</td>
+                            <td class="py-4 px-6">Ana Silva</td>
+                            <td class="py-4 px-6">Desenvolvimento Web (HTML, CSS)</td>
+                            <td class="py-4 px-6">Online (Link a definir)</td>
+                        </tr>
+                        <tr class="border-b hover:bg-sky-50 transition duration-200">
+                            <td class="py-4 px-6">Terça-feira</td>
+                            <td class="py-4 px-6">10:00 - 12:00</td>
+                            <td class="py-4 px-6">Bruno Costa</td>
+                            <td class="py-4 px-6">Python Básico</td>
+                            <td class="py-4 px-6">Sala C105</td>
+                        </tr>
+                        <tr class="border-b hover:bg-sky-50 transition duration-200">
+                            <td class="py-4 px-6">Quarta-feira</td>
+                            <td class="py-4 px-6">16:00 - 18:00</td>
+                            <td class="py-4 px-6">Carla Dias</td>
+                            <td class="py-4 px-6">Java (POO)</td>
+                            <td class="py-4 px-6">Online (Link a definir)</td>
+                        </tr>
+                         <tr class="border-b hover:bg-sky-50 transition duration-200">
+                            <td class="py-4 px-6">Quinta-feira</td>
+                            <td class="py-4 px-6">09:00 - 11:00</td>
+                            <td class="py-4 px-6">Ana Silva</td>
+                            <td class="py-4 px-6">JavaScript Fundamentos</td>
+                            <td class="py-4 px-6">Laboratório 3</td>
+                        </tr>
+                        <tr class="hover:bg-sky-50 transition duration-200">
+                            <td class="py-4 px-6">Sexta-feira</td>
+                            <td class="py-4 px-6">13:00 - 15:00</td>
+                            <td class="py-4 px-6">Bruno Costa</td>
+                            <td class="py-4 px-6">Análise de Dados com Pandas</td>
+                            <td class="py-4 px-6">Online (Link a definir)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-center text-md text-gray-600 mt-8">
+                <i class="fas fa-info-circle mr-2 text-sky-600"></i>Para agendamentos específicos ou dúvidas, entre em contato diretamente com os monitores.
+            </p>
+        </div>
+    </section>
+
+    <section id="recursos" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-sky-700">Recursos e Materiais</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-sky-500 text-3xl mb-4"><i class="fas fa-book-open"></i></div>
+                    <h3 class="text-xl font-semibold mb-3 text-sky-700">Guias de Estudo</h3>
+                    <p class="text-gray-600 mb-4">Acesse guias completos e resumos das principais disciplinas e tecnologias abordadas.</p>
+                    <a href="#" class="text-sky-600 hover:text-sky-800 font-medium">Ver Guias <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-sky-500 text-3xl mb-4"><i class="fas fa-laptop-code"></i></div>
+                    <h3 class="text-xl font-semibold mb-3 text-sky-700">Exemplos de Código</h3>
+                    <p class="text-gray-600 mb-4">Explore repositórios com exemplos práticos de código para diversas linguagens e frameworks.</p>
+                    <a href="#" class="text-sky-600 hover:text-sky-800 font-medium">Acessar Códigos <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-sky-500 text-3xl mb-4"><i class="fas fa-link"></i></div>
+                    <h3 class="text-xl font-semibold mb-3 text-sky-700">Links Úteis</h3>
+                    <p class="text-gray-600 mb-4">Uma curadoria de links para documentações, tutoriais, ferramentas e comunidades online.</p>
+                    <a href="#" class="text-sky-600 hover:text-sky-800 font-medium">Explorar Links <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-sky-500 text-3xl mb-4"><i class="fas fa-video"></i></div>
+                    <h3 class="text-xl font-semibold mb-3 text-sky-700">Gravações de Workshops</h3>
+                    <p class="text-gray-600 mb-4">Assista às gravações de workshops e sessões especiais realizadas pelos nossos monitores.</p>
+                    <a href="#" class="text-sky-600 hover:text-sky-800 font-medium">Ver Gravações <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-sky-500 text-3xl mb-4"><i class="fas fa-lightbulb"></i></div>
+                    <h3 class="text-xl font-semibold mb-3 text-sky-700">Dicas de Estudo</h3>
+                    <p class="text-gray-600 mb-4">Conselhos e estratégias para otimizar seu aprendizado e se preparar para avaliações.</p>
+                    <a href="#" class="text-sky-600 hover:text-sky-800 font-medium">Ler Dicas <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-sky-500 text-3xl mb-4"><i class="fas fa-question-circle"></i></div>
+                    <h3 class="text-xl font-semibold mb-3 text-sky-700">FAQ da Monitoria</h3>
+                    <p class="text-gray-600 mb-4">Respostas para as perguntas mais frequentes sobre o funcionamento da monitoria.</p>
+                    <a href="#" class="text-sky-600 hover:text-sky-800 font-medium">Consultar FAQ <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-20 bg-gradient-to-br from-sky-700 to-cyan-600 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Entre em Contato</h2>
+            <div class="max-w-2xl mx-auto bg-white text-gray-800 p-8 sm:p-10 rounded-xl shadow-2xl">
+                <form action="#" method="POST"> <div class="mb-6">
+                        <label for="name" class="block text-gray-700 font-medium mb-2">Nome Completo</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none transition-shadow" placeholder="Seu nome" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block text-gray-700 font-medium mb-2">E-mail</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none transition-shadow" placeholder="seu.email@exemplo.com" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="subject" class="block text-gray-700 font-medium mb-2">Assunto</label>
+                        <input type="text" id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none transition-shadow" placeholder="Sobre o que você gostaria de falar?" required>
+                    </div>
+                    <div class="mb-8">
+                        <label for="message" class="block text-gray-700 font-medium mb-2">Mensagem</label>
+                        <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none transition-shadow" placeholder="Sua mensagem..." required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-sky-600 hover:bg-sky-700 text-white font-semibold py-3 px-10 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-opacity-75">
+                            Enviar Mensagem <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </div>
+                </form>
+                <p class="text-center text-gray-600 mt-8 text-sm">
+                    Ou envie um e-mail para: <a href="mailto:contato.monitoria@example.com" class="text-sky-600 hover:underline">contato.monitoria@example.com</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-300 py-10 text-center">
+        <div class="container mx-auto px-6">
+            <p>&copy; <span id="currentYear"></span> Projeto de Monitoria de Tecnologia. Todos os direitos reservados.</p>
+            <p class="text-sm mt-2">Desenvolvido com <i class="fas fa-heart text-red-500"></i> e Tailwind CSS.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Script para menu mobile
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinksMobile = mobileMenu.querySelectorAll('a');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuButton.parentElement.parentElement.classList.toggle('menu-open'); // Adiciona/remove classe no header para estilizar o ícone
+        });
+
+        // Fecha o menu mobile ao clicar em um link
+        navLinksMobile.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuButton.parentElement.parentElement.classList.remove('menu-open');
+            });
+        });
+        
+        // Script para o ano atual no rodapé
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Smooth scroll para links da navegação principal (desktop)
+        const navLinksDesktop = document.querySelectorAll('header nav a');
+        navLinksDesktop.forEach(link => {
+            link.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                // Apenas previne o padrão se for um link interno da página
+                if (targetId.startsWith('#')) {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        // Calcula o offset do header fixo
+                        const headerOffset = document.querySelector('header').offsetHeight;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+                    }
+                }
+            });
+        });
+         // Smooth scroll para links da navegação mobile
+        navLinksMobile.forEach(link => {
+            link.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                 if (targetId.startsWith('#')) {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerOffset = document.querySelector('header').offsetHeight;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+                         // Fecha o menu após o clique
+                        mobileMenu.classList.add('hidden');
+                        menuButton.parentElement.parentElement.classList.remove('menu-open');
+                    }
+                }
+            });
+        });
+
+
+    </script>
+
+</body>
+</html>
