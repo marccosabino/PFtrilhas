@@ -7,32 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .smooth-scroll {
-            scroll-behavior: smooth;
-        }
-        /* Estilo para o menu hamburguer */
-        .menu-icon span {
-            display: block;
-            width: 25px;
-            height: 3px;
-            background-color: white;
-            margin: 5px 0;
-            transition: 0.4s;
-        }
-        .menu-open .menu-icon span:nth-child(1) {
-            transform: rotate(-45deg) translate(-5px, 6px);
-        }
-        .menu-open .menu-icon span:nth-child(2) {
-            opacity: 0;
-        }
-        .menu-open .menu-icon span:nth-child(3) {
-            transform: rotate(45deg) translate(-5px, -6px);
-        }
-    </style>
+    <link rel="stylesheet" href="site.css"
 </head>
 <body class="bg-gray-100 text-gray-800 smooth-scroll">
 
@@ -273,78 +248,5 @@
             <p class="text-sm mt-2">Desenvolvido com <i class="fas fa-heart text-red-500"></i> e Tailwind CSS.</p>
         </div>
     </footer>
-
-    <script>
-        // Script para menu mobile
-        const menuButton = document.getElementById('menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navLinksMobile = mobileMenu.querySelectorAll('a');
-
-        menuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            menuButton.parentElement.parentElement.classList.toggle('menu-open'); // Adiciona/remove classe no header para estilizar o ícone
-        });
-
-        // Fecha o menu mobile ao clicar em um link
-        navLinksMobile.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                menuButton.parentElement.parentElement.classList.remove('menu-open');
-            });
-        });
-        
-        // Script para o ano atual no rodapé
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // Smooth scroll para links da navegação principal (desktop)
-        const navLinksDesktop = document.querySelectorAll('header nav a');
-        navLinksDesktop.forEach(link => {
-            link.addEventListener('click', function(e) {
-                const targetId = this.getAttribute('href');
-                // Apenas previne o padrão se for um link interno da página
-                if (targetId.startsWith('#')) {
-                    e.preventDefault();
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        // Calcula o offset do header fixo
-                        const headerOffset = document.querySelector('header').offsetHeight;
-                        const elementPosition = targetElement.getBoundingClientRect().top;
-                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-        
-                        window.scrollTo({
-                            top: offsetPosition,
-                            behavior: "smooth"
-                        });
-                    }
-                }
-            });
-        });
-         // Smooth scroll para links da navegação mobile
-        navLinksMobile.forEach(link => {
-            link.addEventListener('click', function(e) {
-                const targetId = this.getAttribute('href');
-                 if (targetId.startsWith('#')) {
-                    e.preventDefault();
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        const headerOffset = document.querySelector('header').offsetHeight;
-                        const elementPosition = targetElement.getBoundingClientRect().top;
-                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-        
-                        window.scrollTo({
-                            top: offsetPosition,
-                            behavior: "smooth"
-                        });
-                         // Fecha o menu após o clique
-                        mobileMenu.classList.add('hidden');
-                        menuButton.parentElement.parentElement.classList.remove('menu-open');
-                    }
-                }
-            });
-        });
-
-
-    </script>
-
 </body>
 </html>
