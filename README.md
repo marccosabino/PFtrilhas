@@ -25,141 +25,22 @@ Esta aplicação mínima viável (MVP) oferece as seguintes funcionalidades:
 
 Este projeto foi desenvolvido com as seguintes tecnologias:
 
-  * **Backend:**
-      * **Python 3:** Linguagem de programação principal.
-      * **Flask:** Micro-framework web para o desenvolvimento do servidor.
-      * **SQLite3:** Banco de dados leve e integrado, ideal para prototipagem e pequenos projetos.
   * **Frontend:**
       * **HTML5:** Estrutura das páginas web.
       * **CSS3:** Estilização e design da interface do usuário.
       * **JavaScript:** (Ainda não amplamente utilizado neste MVP, mas presente para futuras interações).
+        
+  * **Backend:**
+      * **Python 3:** Linguagem de programação principal.
+      * **Flask:** Micro-framework web para o desenvolvimento do servidor.
+      * **SQLite3:** Banco de dados leve e integrado, ideal para prototipagem e pequenos projetos.
+ 
   * **Arquitetura:**
       * **MVC (Model-View-Controller):** Padrão de design para organização do código.
 
 -----
 
-## ⚙️ Como Configurar e Rodar o Projeto
-
-Siga estes passos para ter a aplicação rodando em sua máquina local.
-
-### Pré-requisitos
-
-Certifique-se de ter o **Python 3** instalado em seu sistema.
-
-### 1\. Clonar o Repositório (ou Criar a Estrutura)
-
-#### Opção A: Se você já tem o código em pastas
-
-Se você já criou a estrutura de pastas e arquivos manualmente, apenas navegue até a pasta `plataforma_trilhas` no seu terminal.
-
-```bash
-cd plataforma_trilhas
-```
-
-#### Opção B: Se você está começando do zero (recomendado para GitHub)
-
-```bash
-git clone <URL_DO_SEU_REPOSITORIO>
-cd plataforma_trilhas
-```
-
-### 2\. Instalar as Dependências
-
-Dentro da pasta `plataforma_trilhas`, instale o Flask usando pip:
-
-```bash
-pip install Flask
-```
-
-Você pode ver um aviso para atualizar o `pip`. Siga a sugestão se desejar:
-
-```bash
-python -m pip install --upgrade pip
-```
-
-### 3\. Inicializar o Banco de Dados
-
-É crucial que o banco de dados e suas tabelas sejam criados antes de rodar a aplicação.
-
-1.  **Gere o arquivo `schema.sql`:** Este arquivo está na raiz do seu projeto.
-
-2.  **Execute o script de inicialização do DB:**
-
-    ```bash
-    python database.py
-    ```
-
-    Você deverá ver a mensagem: `Banco de dados inicializado.`
-
-
-
-
-```
-plataforma_trilhas/
-├── app.py
-├── config.py
-├── database.py
-├── models.py
-├── schema.sql
-├── static/
-│   ├── css/
-│   │   └── style.css
-│   └── js/
-│       └── script.js
-└── templates/
-    ├── index.html
-    ├── login.html
-    ├── nova_trilha.html
-    ├── novo_modulo.html
-    ├── register.html
-    └── trilha_detalhe.html
-```
-
----
-
-### Observações Importantes:
-
-* A pasta **`plataforma_trilhas/`** é a raiz do seu projeto.
-* Os arquivos `.py` e `.sql` (exceto os que estão dentro de `static/` ou `templates/`) devem estar diretamente dentro da pasta raiz.
-* A pasta **`static/`** contém todos os seus arquivos de CSS e JavaScript (e outras mídias, se você adicionar no futuro).
-* A pasta **`templates/`** contém todos os seus arquivos HTML.
-
-Essa organização ajuda a manter o projeto limpo, modular e fácil de entender, o que é fundamental para a arquitetura MVC.
-
-### 4\. Rodar a Aplicação
-
-Com as dependências instaladas e o banco de dados inicializado, você pode iniciar o servidor Flask:
-
-```bash
-python app.py
-```
-
-Você verá mensagens como:
-`* Serving Flask app 'app'`
-`* Debug mode: on`
-`* Running on http://127.0.0.1:5000`
-
-### 5\. Acessar no Navegador
-
-Abra seu navegador e vá para o endereço:
-[http://127.0.0.1:5000/](https://www.google.com/search?q=http://127.0.0.1:5000/)
-
------
-
-## 🔑 Acessando a Plataforma
-
-  * **Usuários de Teste (já inseridos via `schema.sql`):**
-      * **Voluntário:**
-          * Usuário: `voluntario1`
-          * Senha: `senha123`
-      * **Aprendiz:**
-          * Usuário: `aprendiz1`
-          * Senha: `senha456`
-  * Você também pode registrar novos usuários pela página de `Registrar`.
-
------
-
-## 🤝 Como Contribuir
+## 🤝 Você também pode nos ajudar!
 
 Sua ajuda é muito bem-vinda para expandir esta plataforma\!
 
