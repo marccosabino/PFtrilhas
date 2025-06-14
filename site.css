@@ -1,6 +1,8 @@
 body {
     font-family: 'Inter', sans-serif;
+    background-color: black;
 }
+
 .smooth-scroll {
     scroll-behavior: smooth;
 }
@@ -21,4 +23,8 @@ body {
         }
 .menu-open .menu-icon span:nth-child(3) {
     transform: rotate(45deg) translate(-5px, -6px);
+}
+/*COR DO TEXTO*/
+.text-sky-600 {
+    color: #ff791f
 }
