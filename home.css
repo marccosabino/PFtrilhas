@@ -1,0 +1,1193 @@
+/* Variáveis CSS para cores e fontes */
+:root {
+    --primary-blue: #00bcd4; /* Azul ciano */
+    --secondary-orange: #ff8c00; /* Laranja vibrante */
+    --background-dark-blue: #1a1a2e; /* Azul escuro quase preto */
+    --card-background: #16213e; /* Azul escuro um pouco mais claro */
+    --text-color: #e0e0e0; /* Cinza claro */
+    --heading-color: #f0f0f0; /* Branco suave */
+    --accent-blue: #0f3460; /* Azul escuro acentuado */
+    --border-blue: #00796b; /* Verde azulado para bordas */
+    --hover-light-blue: #00e5ff; /* Azul ciano mais claro para hover */
+    --hover-light-orange: #ffa500; /* Laranja mais claro para hover */
+
+    --font-primary: 'Montserrat', sans-serif;
+    --font-display: 'Orbitron', sans-serif;
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--background-dark-blue);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden; /* Evita rolagem horizontal */
+}
+
+/* Efeito de Partículas */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+}
+
+/* Cabeçalho */
+.tech-header {
+    background: linear-gradient(90deg, var(--card-background) 0%, rgba(22, 33, 62, 0.8) 100%);
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--border-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.logo-container {
+    padding-left: 2rem;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.site-logo {
+    height: 50px; /* Ajuste conforme necessário */
+    margin-right: 10px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-logo {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--heading-color);
+    letter-spacing: 2px;
+}
+
+.highlight-logo {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--secondary-orange); /* Laranja */
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 0.75rem;
+    color: var(--text-color);
+    margin-top: -5px;
+    opacity: 0.8;
+}
+
+.tech-nav ul {
+    list-style: none;
+    display: flex;
+    padding-right: 2rem;
+}
+
+.tech-nav ul li {
+    margin-left: 1.5rem;
+}
+
+.tech-nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    position: relative;
+    padding-bottom: 5px; /* Espaço para o underline */
+}
+
+.nav-link.hover-underline::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: var(--primary-blue);
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link.hover-underline:hover::after,
+.nav-link.hover-underline.active::after { /* Adicionado .active para navegação ativa */
+    width: 100%;
+}
+
+.tech-nav ul li a:hover {
+    color: var(--hover-light-blue);
+}
+
+/* Seções Gerais */
+section {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1; /* Garante que o conteúdo fique acima das partículas */
+}
+
+.section-title {
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    color: var(--heading-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--secondary-orange); /* Laranja */
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+/* Botão Tecnológico */
+.tech-button {
+    display: inline-block;
+    background-color: var(--secondary-orange); /* Laranja */
+    color: var(--background-dark-blue);
+    padding: 0.9rem 2.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--secondary-orange); /* Laranja */
+    box-shadow: 0 5px 15px rgba(255, 140, 0, 0.3);
+}
+
+.tech-button:hover {
+    background-color: var(--hover-light-orange); /* Laranja mais claro */
+    border-color: var(--hover-light-orange);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 165, 0, 0.4);
+}
+
+.tech-button.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 140, 0, 0.7); /* Laranja */
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 20px rgba(255, 140, 0, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 140, 0, 0);
+    }
+}
+
+
+/* Seção Hero */
+.hero-section {
+    min-height: calc(100vh - 80px); /* Altura da viewport menos o cabeçalho */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle at center, rgba(0, 188, 212, 0.1) 0%, transparent 70%); /* Azul */
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-title {
+    font-family: var(--font-display);
+    font-size: 3.8rem;
+    color: var(--heading-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    text-shadow: 0 0 20px rgba(0, 188, 212, 0.5); /* Azul */
+}
+
+.hero-text {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+/* Remover .hero-stats */
+.hero-stats {
+    display: none;
+}
+
+
+/* Seção Sobre */
+.about-section {
+    background-color: var(--card-background);
+    border-radius: 20px;
+    padding: 4rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    margin-top: 4rem;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-text {
+    max-width: 900px;
+    text-align: left;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+}
+
+.about-text strong {
+    color: var(--secondary-orange); /* Laranja */
+}
+
+.about-subtitle {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--primary-blue); /* Azul */
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.how-it-works {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.step {
+    background-color: var(--accent-blue);
+    border-radius: 15px;
+    padding: 2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+}
+
+.step-number {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: var(--secondary-orange); /* Laranja */
+    background-color: rgba(255, 140, 0, 0.15); /* Laranja com transparência */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.step-content h4 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    color: var(--heading-color);
+    margin-bottom: 0.5rem;
+}
+
+.step-content p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 0; /* Remove margem inferior padrão de p */
+}
+
+.emphasis-text {
+    font-style: italic;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--primary-blue); /* Azul */
+    margin-top: 2rem;
+}
+
+/* Seção Áreas */
+.areas-section {
+    text-align: center;
+}
+
+.areas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.area-card {
+    background-color: var(--card-background);
+    padding: 2.5rem;
+    border-radius: 15px;
+    border: 1px solid var(--border-blue);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    text-align: center;
+}
+
+.area-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-blue); /* Azul */
+    box-shadow: 0 12px 30px rgba(0, 188, 212, 0.2); /* Azul */
+}
+
+.area-icon {
+    font-size: 3.5rem;
+    color: var(--primary-blue); /* Azul */
+    margin-bottom: 1.5rem;
+    background-color: rgba(0, 188, 212, 0.1); /* Azul com transparência */
+    padding: 1rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+    border: 1px solid var(--primary-blue); /* Azul */
+}
+
+.area-title {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+}
+
+.area-description {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    flex-grow: 1; /* Permite que a descrição ocupe espaço para igualar alturas */
+}
+
+.area-link {
+    color: var(--secondary-orange); /* Laranja */
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.area-link:hover {
+    color: var(--hover-light-orange); /* Laranja mais claro */
+}
+
+.area-card.coming-soon-area {
+    opacity: 0.7;
+    filter: grayscale(80%);
+    position: relative;
+    border-color: var(--secondary-orange); /* Laranja para destaque de "em breve" */
+}
+
+.area-card.coming-soon-area:hover {
+    transform: none;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: var(--secondary-orange);
+}
+
+.area-soon-tag {
+    background-color: var(--secondary-orange);
+    color: var(--background-dark-blue);
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    position: absolute;
+    bottom: 1rem; /* Ajustar posição conforme necessário */
+    right: 1rem;
+    z-index: 2;
+}
+
+
+/* Seção Trilhas */
+.trails-section {
+    text-align: center;
+}
+
+.trail-card {
+    background-color: var(--card-background);
+    border-radius: 20px;
+    padding: 3.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border: 2px solid var(--border-blue);
+    margin-bottom: 3rem;
+}
+
+.trail-card.featured {
+    border-color: var(--secondary-orange); /* Laranja */
+    box-shadow: 0 10px 40px rgba(255, 140, 0, 0.3); /* Laranja */
+    transform: scale(1.02);
+}
+
+.trail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap; /* Para responsividade */
+}
+
+.trail-title {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: var(--primary-blue); /* Azul */
+}
+
+.trail-level {
+    background-color: var(--secondary-orange); /* Laranja */
+    color: var(--background-dark-blue);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.trail-description {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    text-align: left;
+}
+
+.trail-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Tópicos menores, recursos maiores */
+    gap: 3rem;
+    text-align: left;
+}
+
+.trail-topics, .trail-resources {
+    background-color: var(--accent-blue);
+    border-radius: 15px;
+    padding: 2.5rem;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 188, 212, 0.3); /* Azul com transparência */
+}
+
+.topics-title, .resources-title {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    color: var(--heading-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.topics-title::after, .resources-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--secondary-orange); /* Laranja */
+    border-radius: 2px;
+}
+
+.topics-list {
+    list-style: none;
+}
+
+.topics-list li {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+}
+
+.topics-list li i {
+    color: var(--primary-blue); /* Azul */
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.resource-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.resource-item:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.resource-icon {
+    font-size: 1.8rem;
+    color: var(--secondary-orange); /* Laranja */
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.resource-info h5 {
+    font-size: 1.1rem;
+    color: var(--heading-color);
+    margin-bottom: 0.3rem;
+}
+
+.resource-link {
+    color: var(--primary-blue); /* Azul */
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.resource-link:hover {
+    color: var(--hover-light-blue); /* Azul mais claro */
+    text-decoration: underline;
+}
+
+.trail-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px dashed rgba(255, 255, 255, 0.2);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.trail-time {
+    font-size: 1rem;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0.8;
+}
+
+.trail-time i {
+    color: var(--primary-blue); /* Azul */
+}
+
+.coming-soon {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 2px dashed var(--primary-blue); /* Azul */
+    border-radius: 15px;
+    padding: 2.5rem;
+    text-align: center;
+    margin-top: 4rem;
+    box-shadow: 0 5px 20px rgba(0, 188, 212, 0.2); /* Azul */
+}
+
+.soon-title {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--primary-blue); /* Azul */
+    margin-bottom: 1rem;
+}
+
+.soon-text {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.soon-areas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.soon-tag {
+    background-color: rgba(0, 188, 212, 0.15); /* Azul com transparência */
+    color: var(--primary-blue); /* Azul */
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 1px solid var(--primary-blue); /* Azul */
+}
+
+/* Seção Equipe */
+.team-section {
+    text-align: center;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.team-card {
+    background-color: var(--card-background);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+    border: 1px solid var(--border-blue);
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 188, 212, 0.2); /* Azul */
+}
+
+.team-image-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1.5rem;
+    border: 4px solid var(--secondary-orange); /* Laranja */
+    background-color: var(--background-dark-blue);
+}
+
+.team-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.tech-border {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 5px solid var(--primary-blue); /* Azul */
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.team-card:hover .tech-border {
+    opacity: 1;
+}
+
+.team-name {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--heading-color);
+    margin-bottom: 0.5rem;
+}
+
+.team-role {
+    font-size: 1rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    margin-bottom: 1rem; /* Adicionado para separar do social-links */
+}
+
+/* Estilos para os novos botões sociais */
+.social-links {
+    display: flex;
+    gap: 1rem; /* Espaçamento entre os botões */
+    margin-top: 1.5rem; /* Margem acima dos botões */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.social-button {
+    display: inline-flex; /* Permite ícone e texto na mesma linha */
+    align-items: center;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    color: var(--background-dark-blue); /* Cor do texto dentro do botão */
+}
+
+.social-button i {
+    margin-right: 0.5rem;
+    font-size: 1rem;
+}
+
+.social-button.github {
+    background-color: #333; /* Cor do GitHub */
+    border-color: #333;
+    color: #f0f0f0; /* Cor do ícone/texto */
+}
+
+.social-button.github:hover {
+    background-color: #555;
+    border-color: #555;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.social-button.linkedin {
+    background-color: #0077B5; /* Cor do LinkedIn */
+    border-color: #0077B5;
+    color: #f0f0f0; /* Cor do ícone/texto */
+}
+
+.social-button.linkedin:hover {
+    background-color: #0088cc;
+    border-color: #0088cc;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 119, 181, 0.3);
+}
+
+
+.project-info {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.7;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* Seção de Contato */
+.contact-section {
+    text-align: center;
+    margin-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.contact-text {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+.contact-button {
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    background-color: var(--primary-blue); /* Azul */
+    border-color: var(--primary-blue);
+    box-shadow: 0 5px 15px rgba(0, 188, 212, 0.3);
+}
+
+.contact-button:hover {
+    background-color: var(--hover-light-blue); /* Azul mais claro */
+    border-color: var(--hover-light-blue);
+    box-shadow: 0 8px 20px rgba(0, 229, 255, 0.4);
+}
+
+.contact-button i {
+    margin-right: 10px;
+}
+
+/* Rodapé */
+.tech-footer {
+    background-color: var(--card-background);
+    padding: 3rem 2rem;
+    border-top: 2px solid var(--border-blue);
+    color: var(--text-color);
+    text-align: center;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    text-align: left;
+    gap: 2rem;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.footer-logo-img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.footer-logo span {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--heading-color);
+}
+
+.footer-section p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.5rem;
+}
+
+.footer-title {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    color: var(--primary-blue); /* Azul */
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--secondary-orange); /* Laranja */
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-section ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.footer-section ul li a:hover {
+    color: var(--primary-blue); /* Azul */
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.footer-bottom p {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.palette-explanation {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 140, 0, 0.3); /* Laranja */
+    text-align: left;
+    line-height: 1.6;
+}
+
+.palette-explanation strong {
+    color: var(--secondary-orange); /* Laranja */
+}
+
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .tech-header {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 1rem;
+    }
+
+    .logo-container {
+        padding-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    .tech-nav ul {
+        padding-right: 0;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .tech-nav ul li {
+        margin: 0 1rem;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-text {
+        font-size: 1.2rem;
+    }
+
+    .about-section {
+        padding: 3rem;
+    }
+
+    .about-subtitle {
+        font-size: 1.6rem;
+    }
+
+    .how-it-works {
+        grid-template-columns: 1fr;
+    }
+
+    .trail-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 2rem;
+    }
+
+    .footer-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 4rem 1rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+    }
+
+    .tech-button {
+        padding: 0.7rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .about-section {
+        padding: 2rem;
+    }
+
+    .about-text {
+        font-size: 1rem;
+    }
+
+    .step-number {
+        font-size: 2rem;
+        width: 50px;
+        height: 50px;
+    }
+
+    .step-content h4 {
+        font-size: 1.2rem;
+    }
+
+    .area-card {
+        padding: 2rem;
+    }
+
+    .area-icon {
+        font-size: 3rem;
+        width: 80px;
+        height: 80px;
+    }
+
+    .area-title {
+        font-size: 1.5rem;
+    }
+
+    .trail-card {
+        padding: 2rem;
+    }
+
+    .trail-title {
+        font-size: 2rem;
+    }
+
+    .trail-description {
+        font-size: 1rem;
+    }
+
+    .topics-title, .resources-title {
+        font-size: 1.4rem;
+    }
+
+    .resource-icon {
+        font-size: 1.5rem;
+    }
+
+    .resource-info h5 {
+        font-size: 1rem;
+    }
+
+    .resource-link {
+        font-size: 0.85rem;
+    }
+
+    .trail-footer {
+        flex-direction: column;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .team-image-container {
+        width: 120px;
+        height: 120px;
+    }
+
+    .team-name {
+        font-size: 1.5rem;
+    }
+
+    .social-links {
+        flex-direction: column; /* Botões empilhados em telas pequenas */
+        gap: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-logo, .highlight-logo {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 0.65rem;
+    }
+
+    .tech-nav ul li {
+        margin: 0 0.5rem;
+    }
+
+    .tech-nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-text {
+        font-size: 0.9rem;
+    }
+
+    .tech-button {
+        padding: 0.7rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .about-subtitle {
+        font-size: 1.4rem;
+    }
+
+    .step-content h4 {
+        font-size: 1.1rem;
+    }
+
+    .area-icon {
+        font-size: 2.5rem;
+        width: 70px;
+        height: 70px;
+    }
+
+    .area-title {
+        font-size: 1.3rem;
+    }
+
+    .trail-title {
+        font-size: 1.8rem;
+    }
+
+    .topics-title, .resources-title {
+        font-size: 1.2rem;
+    }
+
+    .resource-item {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .resource-icon {
+        margin-bottom: 0.5rem;
+        margin-right: 0;
+    }
+}
