@@ -134,8 +134,8 @@ document.addEventListener('DOMContentLoaded', () => {
             `,
             resources: [
                 { name: "Mozilla Developer Network (MDN) - Como a Internet funciona", link: "https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP" },
-                { name: "Alura - O que é HTTP?", link: "https://www.alura.com.br/artigos/o-que-e-http" },
-                { name: "YouTube: Como a internet funciona - Curso em Vídeo", link: "https://www.youtube.com/watch?v=nl_JbBwJbJk" }
+                { name: "Alura - O que é HTTP?", link: "https://www.alura.com.br/curso-online-http-entendendo-web-por-baixo-dos-panos" },
+                { name: "YouTube: Como a internet funciona - Curso em Vídeo", link: "https://youtu.be/nlO5hySqJFA?si=oYxAuYkAPrECPsY4" }
             ]
         },
         html: {
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
             resources: [
                 { name: "MDN Web Docs - Introdução ao HTML", link: "https://developer.mozilla.org/pt-BR/docs/Web/HTML/Introducao" },
                 { name: "W3Schools - HTML Tutorial", link: "https://www.w3schools.com/html/" },
-                { name: "Curso em Vídeo - HTML5 e CSS3", link: "https://www.youtube.com/playlist?list=PLHz_ArekSsLaFb0GBYADjge_L73gG_fL-" }
+                { name: "Curso em Vídeo - HTML5 e CSS3", link: "https://youtu.be/Ejkb_YpuHWs?si=U5URQbR6BGU74ERq" }
             ]
         },
         css: {
