@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programando Futuros</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="trilhas.css"
+</head>
+<body class="bg-gray-100 text-gray-800 smooth-scroll">
+
+    <header class="bg-sky-700 text-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#inicio" class="text-2xl font-bold hover:text-sky-200 transition duration-300">Programando Futuros</a>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#inicio" class="hover:text-sky-200 transition duration-300">Início</a>
+                <a href="#sobre" class="hover:text-sky-200 transition duration-300">Sobre</a>
+                <a href="#monitores" class="hover:text-sky-200 transition duration-300">Monitores</a>
+                <a href="#horarios" class="hover:text-sky-200 transition duration-300">Horários</a>
+                <a href="#recursos" class="hover:text-sky-200 transition duration-300">Recursos</a>
+                <a href="#contato" class="hover:text-sky-200 transition duration-300">Contato</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-button" class="menu-icon focus:outline-none">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-sky-700">
+            <a href="#inicio" class="block py-2 px-6 text-sm hover:bg-sky-600 transition duration-300">Início</a>
+            <a href="#sobre" class="block py-2 px-6 text-sm hover:bg-sky-600 transition duration-300">Sobre</a>
+            <a href="#monitores" class="block py-2 px-6 text-sm hover:bg-sky-600 transition duration-300">Trilhas</a>
+            <a href="#horarios" class="block py-2 px-6 text-sm hover:bg-sky-600 transition duration-300">Horários</a>
+            <a href="#recursos" class="block py-2 px-6 text-sm hover:bg-sky-600 transition duration-300">Recursos</a>
+            <a href="#contato" class="block py-2 px-6 text-sm hover:bg-sky-600 transition duration-300">Contato</a>
+        </div>
+    </header>
+
+    <!--SESSÃO DE EXPLICAÇÃO DO PROJETO-->
+    <section id="inicio" class="pt-24 pb-16 bg-gradient-to-r from-sky-600 to-cyan-500 text-white min-h-screen flex items-center">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">Bem-vindo ao Programando futuros!</h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">Desenvolvido por estudantes do CEUB para oferecer trilhas sobre as materias e conteúdos de tecnologia da informação.
+                O "Programando Futuros" surge como uma resposta tecnológica à necessidade de orientação tecnológica no  campo educacional, especialmente voltadas às escolas públicas
+            </p>
+            <a href="#sobre" class="bg-white text-sky-700 font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-sky-100 transition duration-300 text-lg">Saiba Mais</a>
+        </div>
+    </section>
+
+    <!--SESSÃO 'SOBRE O PROJETO'-->
+    <section id="sobre" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-sky-700">Sobre o Projeto</h2>
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <img src="img/LogoRedimensionada_superres.png" alt="Imagem ilustrativa do projeto de monitoria" class="rounded-lg shadow-xl w-full h-auto object-cover">
+                </div>
+                <div class="space-y-6 text-lg text-gray-700">
+                    <p><strong class="text-sky-600">Identidade visual e logo:</strong> As cores principais são o azul e o laranja. 
+                        O azul representa tecnologia, conhecimento e confiança. O laranja trás energia, criatividade e acolhimento.
+                        Juntas, essas cores transmitem nossos ideais e os valores do projeto que estão presentes em todo o site.
+                        O foguete simboliza o avanço, a inovação e o futuro que buscamos ao impulsionar a educação tecnológica. 
+                        A sequência "010101" representa o código binário — a base da programação e essência da tecnologia. 
+                        Já a tag </> faz referência ao universo do desenvolvimento web, reforçando a ideia de conclusão e continuidade no processo de aprendizado.
+                    <p><strong class="text-sky-600">Nossa Missão:</strong> Facilitar o aprendizado e o desenvolvimento de habilidades em tecnologia para todos os alunos, oferecendo material personalizado e recursos de qualidade.</p>
+                    <p><strong class="text-sky-600">Nossos Objetivos:</strong></p>
+                    <ul class="list-disc list-inside ml-4 space-y-2">
+                        <li>Reduzir as dificuldades dos alunos em disciplinas de tecnologia.</li>
+                        <li>guiar os interessados a que caminho seguir para facilitar o aprendizado.</li>
+                        <li>Capacitar os alunos com conhecimentos práticos para o mercado.</li>
+                        <li>Incentivar a paixão pela tecnologia e inovação.</li>
+                    </ul>
+                    <p><strong class="text-sky-600">Como Funciona:</strong> Ofereceremos trilhas de aprendizado para que pessoas interessadas na área possam ter um caminho o qual seguir para aprender e desenvolver-se o melhor possivel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--SESSÃO 'NOSSOS CRIADORES'-->
+    <section id="monitores" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-16 text-sky-700">Nossos Criadores</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                <img src="img/FotoPerfil.jpeg" alt="Foto de Jhenifer Meneses" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-orange-500">
+                <h3 class="text-2xl font-semibold text-center mb-2 text-sky-700">Jhenifer Meneses</h3>
+                <p class="text-center text-sky-600 font-medium mb-3">Desenvolvedora full-stack, Power BI.</p>
+                <p class="text-gray-600 text-sm text-center leading-relaxed">"Sou uma desenvolvedora de software. Estou em uma jornada constante de aprendizado e crescimento, com um foco especial em engenharia de software e Power BI. Se você está aqui, vamos explorar juntos o que posso criar e aprender!"</p>
+                <div class="text-center mt-4">
+                    <a href="https://github.com/JheniferFM" target="_blank" class="text-sky-500 hover:text-sky-700"><i class="fas fa-envelope mr-1"></i> Contatar</a>
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                <img src="img/FotoPerfil.jpeg" alt="Foto de Marco Sabino" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-orange-500">
+                <h3 class="text-2xl font-semibold text-center mb-2 text-sky-700">Marco Sabino</h3>
+                <p class="text-center text-sky-600 font-medium mb-3">Cientista de Dados, Python</p>
+                <p class="text-gray-600 text-sm text-center leading-relaxed">"Sou apaixonado por dados e inteligência artificial, e estou me dedicando para me tornar um profissional nessa área fascinante. Adoro o desafio de resolver problemas, criar soluções inovadoras e estou sempre em busca de aprender novas tecnologias."</p>
+                <div class="text-center mt-4">
+                    <a href="https://github.com/marccosabino" target="_blank" class="text-sky-500 hover:text-sky-700"><i class="fas fa-envelope mr-1"></i> Contatar</a>
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                <img src="img/FotoPerfil.jpeg" alt="Foto de Gabriel Malaquias" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-orange-500">
+                <h3 class="text-2xl font-semibold text-center mb-2 text-sky-700">Gabriel Malaquias</h3>
+                <p class="text-center text-sky-600 font-medium mb-3">Desenvolvedor Web, C#, Python</p>
+                <p class="text-gray-600 text-sm text-center leading-relaxed">"Atualmente estou explorando linguagens e conceitos de programação. Focando atualmente em c# e Java, almejo uma carreira internacional, embora ainda esteja definindo minha área de atuação principal."</p>
+                <div class="text-center mt-4">
+                    <a href="https://github.com/Gb-Malaquias" target="_blank" class="text-sky-500 hover:text-sky-700"><i class="fas fa-envelope mr-1"></i> Contatar</a>
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                <img src="img/FotoPerfil.jpeg" alt="Foto de Islayne Morais" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-orange-500">
+                <h3 class="text-2xl font-semibold text-center mb-2 text-sky-700">Islayne Morais</h3>
+                <p class="text-center text-sky-600 font-medium mb-3">Analista de Qualidade</p>
+                <p class="text-gray-600 text-sm text-center leading-relaxed">"Focada em garantir a qualidade e a integridade do software. Realizo testes detalhados para assegurar que os mais altos padrões sejam atendidos antes de qualquer lançamento, buscando sempre a excelência do produto."</p>
+                <div class="text-center mt-4">
+                    <a href="#" class="text-sky-500 hover:text-sky-700"><i class="fas fa-envelope mr-1"></i> Contatar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="recursos" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-sky-700">Recursos e Materiais</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-sky-500 text-3xl mb-4"><i class="fas fa-book-open"></i></div>
+                    <h3 class="text-xl font-semibold mb-3 text-sky-700">Guias de Estudo</h3>
+                    <p class="text-gray-600 mb-4">Acesse guias completos e resumos das principais disciplinas e tecnologias abordadas.</p>
+                    <a href="#" class="text-sky-600 hover:text-sky-800 font-medium">Ver Guias <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-sky-500 text-3xl mb-4"><i class="fas fa-laptop-code"></i></div>
+                    <h3 class="text-xl font-semibold mb-3 text-sky-700">Exemplos de Código</h3>
+                    <p class="text-gray-600 mb-4">Explore repositórios com exemplos práticos de código para diversas linguagens e frameworks.</p>
+                    <a href="#" class="text-sky-600 hover:text-sky-800 font-medium">Acessar Códigos <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-sky-500 text-3xl mb-4"><i class="fas fa-link"></i></div>
+                    <h3 class="text-xl font-semibold mb-3 text-sky-700">Links Úteis</h3>
+                    <p class="text-gray-600 mb-4">Uma curadoria de links para documentações, tutoriais, ferramentas e comunidades online.</p>
+                    <a href="#" class="text-sky-600 hover:text-sky-800 font-medium">Explorar Links <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-sky-500 text-3xl mb-4"><i class="fas fa-video"></i></div>
+                    <h3 class="text-xl font-semibold mb-3 text-sky-700">Gravações de Workshops</h3>
+                    <p class="text-gray-600 mb-4">Assista às gravações de workshops e sessões especiais realizadas pelos nossos monitores.</p>
+                    <a href="#" class="text-sky-600 hover:text-sky-800 font-medium">Ver Gravações <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-sky-500 text-3xl mb-4"><i class="fas fa-lightbulb"></i></div>
+                    <h3 class="text-xl font-semibold mb-3 text-sky-700">Dicas de Estudo</h3>
+                    <p class="text-gray-600 mb-4">Conselhos e estratégias para otimizar seu aprendizado e se preparar para avaliações.</p>
+                    <a href="#" class="text-sky-600 hover:text-sky-800 font-medium">Ler Dicas <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-sky-500 text-3xl mb-4"><i class="fas fa-question-circle"></i></div>
+                    <h3 class="text-xl font-semibold mb-3 text-sky-700">FAQ da Monitoria</h3>
+                    <p class="text-gray-600 mb-4">Respostas para as perguntas mais frequentes sobre o funcionamento da monitoria.</p>
+                    <a href="#" class="text-sky-600 hover:text-sky-800 font-medium">Consultar FAQ <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-20 bg-gradient-to-br from-sky-700 to-cyan-600 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Entre em Contato</h2>
+            <div class="max-w-2xl mx-auto bg-white text-gray-800 p-8 sm:p-10 rounded-xl shadow-2xl">
+                <form action="#" method="POST"> <div class="mb-6">
+                        <label for="name" class="block text-gray-700 font-medium mb-2">Nome Completo</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none transition-shadow" placeholder="Seu nome" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block text-gray-700 font-medium mb-2">E-mail</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none transition-shadow" placeholder="seu.email@exemplo.com" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="subject" class="block text-gray-700 font-medium mb-2">Assunto</label>
+                        <input type="text" id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none transition-shadow" placeholder="Sobre o que você gostaria de falar?" required>
+                    </div>
+                    <div class="mb-8">
+                        <label for="message" class="block text-gray-700 font-medium mb-2">Mensagem</label>
+                        <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none transition-shadow" placeholder="Sua mensagem..." required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-sky-600 hover:bg-sky-700 text-white font-semibold py-3 px-10 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-opacity-75">
+                            Enviar Mensagem <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </div>
+                </form>
+                <p class="text-center text-gray-600 mt-8 text-sm">
+                    Ou envie um e-mail para: <a href="mailto:contato.monitoria@example.com" class="text-sky-600 hover:underline">contato.monitoria@example.com</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-300 py-10 text-center">
+        <div class="container mx-auto px-6">
+            <p>&copy; <span id="currentYear"></span> Projeto de Monitoria de Tecnologia. Todos os direitos reservados.</p>
+            <p class="text-sm mt-2">Desenvolvido com Tailwind e CSS.</p>
+        </div>
+    </footer>
+</body>
+</html>
