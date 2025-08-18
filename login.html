@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Programando Futuros</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="theme-color" content="#0b1020">
+</head>
+<body>
+    <div class="particles" id="particles-js"></div>
+
+    <header class="tech-header">
+        <div class="logo-container">
+            <div class="logo-wrapper">
+                <img src="img/logo.jpeg" alt="Logo Programando Futuros" class="site-logo">
+                <div class="logo-text">
+                    <span class="main-logo">Programando</span>
+                    <span class="highlight-logo">Futuros</span>
+                    <p class="subtitle">Guia de Carreiras em Tecnologia</p>
+                </div>
+            </div>
+        </div>
+        <nav class="tech-nav">
+            <ul>
+                <li><a href="index.html#home" class="nav-link hover-underline">Home</a></li>
+                <li><a href="index.html#areas" class="nav-link hover-underline">Áreas</a></li>
+                <li><a href="index.html#trilhas" class="nav-link hover-underline">Trilhas</a></li>
+                <li><a href="index.html#sobre" class="nav-link hover-underline">Sobre</a></li>
+                <li><a href="mailto:programandofuturos5@gmail.com?subject=Contato%20via%20Site%20Programando%20Futuros" class="nav-link hover-underline">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="login-section">
+            <div class="login-wrapper">
+                <div class="login-card">
+                    <div class="login-header">
+                        <h1 class="login-title"><i class="fas fa-user-circle"></i> Entrar</h1>
+                        <p class="login-subtitle">Acesse sua conta para continuar</p>
+                    </div>
+                    <form id="login-form" class="login-form" autocomplete="on">
+                        <div class="form-group">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="seuemail@exemplo.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nickname" class="form-label">Apelido</label>
+                            <input type="text" id="nickname" name="nickname" class="form-input" placeholder="Seu apelido" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="form-label">Senha</label>
+                            <input type="password" id="password" name="password" class="form-input" placeholder="Sua senha" required>
+                        </div>
+                        <div class="form-row">
+                            <label class="keep-login">
+                                <input type="checkbox" id="keep-login" name="keep-login">
+                                <span>Manter conectado</span>
+                            </label>
+                            <a href="#" class="forgot-link" aria-disabled="true">Esqueceu a senha?</a>
+                        </div>
+
+                        <button type="submit" class="tech-button login-button">Entrar</button>
+                        <p id="login-message" class="login-message" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="tech-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="img/logo.jpeg" alt="Logo Programando Futuros" class="footer-logo-img">
+                    <span>Programando Futuros</span>
+                </div>
+                <p>Guia de Carreiras em Tecnologia</p>
+                <p>Projeto Integrador - ADS </p>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Links Úteis</h3>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#areas">Áreas</a></li>
+                    <li><a href="index.html#trilhas">Trilhas</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Recursos Educacionais</h3>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Web Docs</a></li>
+                    <li><a href="https://www.freecodecamp.org/" target="_blank" rel="noopener">freeCodeCamp</a></li>
+                    <li><a href="https://www.codecademy.com/" target="_blank" rel="noopener">Codecademy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Programando Futuros. Um guia independente de carreiras em tecnologia.</p>
+            <p class="palette-explanation">
+                A identidade visual do "Programando Futuros" foi cuidadosamente escolhida para refletir nosso propósito. A combinação dos tons de azul e laranja simboliza, respectivamente, a confiança e a solidez da tecnologia, e a criatividade, energia e inovação que impulsionam o setor. Essa paleta vibrante e moderna busca atrair e inspirar novos talentos, ao mesmo tempo em que transmite um senso de clareza e direcionamento em um universo tão vasto como o da tecnologia.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>
+
